@@ -19,9 +19,7 @@ test:
   timeout: 5000
 
 production:
-    adapter:
+    adapter: sqlite3
     encoding: utf8
-    database:
-    username:
-    password:
+    database: db/production.sqlite3
     host: localhost

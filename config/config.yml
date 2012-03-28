@@ -1,0 +1,10 @@
+---
+title:               Colin Young
+tagline:             i am not a robot.
+login:               <%= ENV["blog_login"] ? ENV["blog_login"] : "user" %>
+password:            <%= ENV["blog_password"] %>
+name:                Colin Young
+twitter:             colinmyoung
+github:              colinyoung
+email:               me@colinyoung.com
+google_analytics_id: <%= ENV["blog_ga_id"] ? ENV["blog_ga_id"] : "" %>
