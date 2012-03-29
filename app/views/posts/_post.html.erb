@@ -11,7 +11,7 @@
 
     <% if post.content %><%= markdown(post.content).to_html.html_safe %><% end %>
     
-    <p><a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a></p>
+    <%= render partial: 'tweet_button', locals: { post: post } %>
 
     <%- if is_admin? -%>
       <ul class="actions">

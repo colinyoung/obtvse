@@ -7,7 +7,7 @@
   <meta name="author" content="<%= CONFIG['name'] %>">
   <link href="/posts.rss" rel="alternate" title="RSS" type="application/rss+xml" />
   <link href='http://fonts.googleapis.com/css?family=Lato:300,900' rel='stylesheet' type='text/css' />
-  <%= render 'twitter' %>
+  <%= render 'headers/twitter' %>
 </head>
 
 <body class="<%= controller_name %> <%= action_name %>">
@@ -25,6 +25,9 @@
       <li><%= link_to 'say hi', "mailto:#{CONFIG['email']}?subject:whats up!" %></li>
       <li><%= link_to 'rss feed', '/posts.rss' %></li>
     </ul>
+    
+    <%= render 'sidebar' %>
+    
     <span class="powered-by">
       Powered by <a href="http://github.com/natew/obtvse.git">Obtvse</a>
       <% if is_admin? %> &nbsp;&middot;&nbsp; <a href="/admin">Admin</a><% end %>
@@ -44,6 +47,7 @@
   </div>
 
   <%= javascript_include_tag 'application' %>
+  <%= render 'headers/coderwall' %>  
 
   <% if CONFIG['google_analytics_id'] %>
     <!-- Google Analytics -->

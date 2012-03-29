@@ -1,0 +1,15 @@
+<link href="http://coderwall.com/stylesheets/jquery.coderwall.css" media="all" rel="stylesheet" type="text/css">
+<script src="http://coderwall.com/javascripts/jquery.coderwall.js"></script>
+<script type="text/javascript">
+$(function() {
+  // cover up the coderwall div with white
+  var cwall = $('.coderwall-root');
+  var height = cwall.height() || 600;
+  var width = cwall.width();
+  
+  $('.coderwall-root').append('<div style="background: white; opacity: 0.6; position: absolute; pointer-events:none; cursor: pointer; ' +
+  'height: '+height+'px;' +
+  'width: '+width+'px;' +
+  '"></div>');
+});
+</script>
